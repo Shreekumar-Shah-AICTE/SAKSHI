@@ -126,7 +126,15 @@ npm test               # 49 Gravity Core + store tests
 npm run verify         # build + browser smoke-test of the golden path
 ```
 
-No `.env` needed. Optional keys live in `.env.example`.
+No `.env` needed. Optional keys are documented in `.env.example`.
+
+## Deploy
+
+One-click on **Vercel**: import this repo, keep the auto-detected **Next.js**
+preset, and deploy. **No environment variables are required** — the keyless demo
+runs on seeded data + free Open-Meteo. For durable persistence, create a Supabase
+project, run `supabase/schema.sql`, and set the three `NEXT_PUBLIC_SUPABASE_*` /
+`SUPABASE_SERVICE_ROLE_KEY` variables (see `.env.example`).
 
 ## Architecture
 
@@ -160,19 +168,11 @@ Voice + photo
 | `/ledger` | Hash-chain, append-only audit log, live tamper demo |
 | `/health`, `/api/seal`, `/api/events`, `/api/tamper`, `/api/dossier/[hash]` | Server endpoints |
 
-## Deploy
+## Tech stack
 
-See **`HANDOFF.md`** for the exact Vercel + Supabase runbook. TL;DR: import the
-repo into Vercel, deploy — no env vars required for the keyless demo.
-
-## Documents
-
-- `PROJECT.md` — the single source of truth (moat, decisions, risk register)
-- `WRITEUP.md` — tools / APIs / datasets + the moat
-- `DEMO_SCRIPT.md` — the 3-act live demo
-- `VIDEO.md` — 2-minute explainer voiceover + shot list
-- `RUBRIC.md` — one line per criterion → where it's earned
-- `HANDOFF.md` — the ordered, copy-pasteable operator runbook
+Next.js 14 (App Router) · TypeScript · Tailwind CSS · Framer Motion · Node
+`crypto` (SHA-256) · `exifr` · `qrcode` · Vitest + Playwright. Optional: Supabase
+(Postgres + RLS). APIs: Open-Meteo (keyless), Copernicus/Sentinel-2, Bhashini.
 
 ## License
 
