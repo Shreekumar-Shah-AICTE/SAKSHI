@@ -1,0 +1,42 @@
+{
+  "name": "sakshi",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SAKSHI (साक्षी) — the tamper-proof witness to every farmer's crop loss. Sealed in 10 seconds, corroborated by satellite + weather no one can bribe.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "smoke": "node scripts/smoke.mjs",
+    "verify": "next build && node scripts/smoke.mjs"
+  },
+  "dependencies": {
+    "exifr": "7.1.3",
+    "framer-motion": "11.3.24",
+    "next": "^14.2.35",
+    "qrcode": "1.5.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.15",
+    "@types/qrcode": "1.5.5",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "autoprefixer": "10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.35",
+    "postcss": "8.4.41",
+    "tailwindcss": "3.4.10",
+    "typescript": "5.5.4",
+    "vitest": "2.0.5"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
