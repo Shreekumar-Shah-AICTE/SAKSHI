@@ -80,6 +80,20 @@ async function main() {
   ).json();
   assert(tamper2.after.reason === "BROKEN_LINK", "re-hashed tamper still breaks the next back-link");
 
+  // Appeal dossier (Service 3): machine-readable export + printable page.
+  const dossierRes = await fetch(`${BASE}/api/dossier/${hash}`);
+  assert(dossierRes.ok, "dossier JSON export responds 200");
+  assert(
+    (dossierRes.headers.get("content-disposition") ?? "").includes("attachment"),
+    "dossier JSON downloads as an attachment",
+  );
+  const dossier = await dossierRes.json();
+  assert(dossier.schema === "sakshi.loss-dossier/v1", "dossier uses the versioned schema");
+  assert(dossier.corroboration.score === 94, "dossier carries the 94/100 score");
+  assert(dossier.narration.length === 3, "dossier carries all 3 language narrations");
+  const dossierPage = await fetch(`${BASE}/dossier/${hash}`);
+  assert(dossierPage.ok, "printable dossier page responds 200");
+
   // --- Real browser (optional) ---
   let chromium;
   try {

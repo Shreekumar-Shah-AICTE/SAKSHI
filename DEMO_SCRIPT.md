@@ -56,6 +56,12 @@ Moment — pause here so judges can photograph it.
 **Say:** *"That's what the farmer sees — simple, dignified. But watch what a judge,
 an ombudsman, a court can see."*
 
+> **Optional (Service 3 — Redressal):** tap **📄 Appeal-ready dossier** to open
+> `/dossier/[hash]` — a clean, multilingual, QR-verifiable document the farmer can
+> Save-as-PDF and file with the DGRC, or **⬇️ Export JSON** for a machine-readable
+> version an ombudsman's system can ingest. *"The loss doesn't just get sealed — it
+> becomes an appeal packet."*
+
 **Click** **"How was this verified?"** — it expands into the real evidence:
 
 - **Independent source 1 — Sentinel-2:** the field's NDVI **0.62 → 0.14, −77%**.

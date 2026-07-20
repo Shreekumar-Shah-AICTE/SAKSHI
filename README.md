@@ -143,6 +143,7 @@ Voice + photo
 ```
 
 - **Golden path:** `/seal` → capture → speak → SEALED → `/receipt/[hash]`
+- **Appeal dossier:** `/dossier/[hash]` — print to PDF or export machine-readable JSON for the DGRC/ombudsman.
 - **Public verifier:** `/verify/[hash]` (the QR target) — recomputes every hash.
 - **The moat, on display:** `/ledger` — the live chain, audit log, tamper demo.
 - **Liveness:** `/health`.
@@ -154,9 +155,10 @@ Voice + photo
 | `/` | The hook + live ledger stats + the five real events |
 | `/seal?event=…` | The three-tap golden path (the Moment) |
 | `/receipt/[hash]` | The Loss Receipt (Screenshot Moment) + "How was this verified?" |
+| `/dossier/[hash]` | Appeal-ready, multilingual, print-perfect Loss Dossier (DGRC/ombudsman) |
 | `/verify/[hash]` | Public QR verifier — trust no one, verify the math |
 | `/ledger` | Hash-chain, append-only audit log, live tamper demo |
-| `/health`, `/api/seal`, `/api/events`, `/api/tamper` | Server endpoints |
+| `/health`, `/api/seal`, `/api/events`, `/api/tamper`, `/api/dossier/[hash]` | Server endpoints |
 
 ## Deploy
 

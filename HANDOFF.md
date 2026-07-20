@@ -47,10 +47,13 @@ Do this *before* submitting. Exact clicks:
    **✓ SEALED · 94/100** dial.
 6. Click **View full receipt** → click **How was this verified?** → confirm the
    satellite, weather (+5.9σ) and hash sections open.
-7. Scan the QR (or open `‹live-url›/verify/‹hash›`) → confirm **VERIFIED ✓**.
-8. Go to `/ledger` → click **⚒️ Forge receipt #1** → confirm **TAMPER DETECTED**.
+7. Click **📄 Appeal-ready dossier** → confirm the light, multilingual dossier
+   renders; **Save / Print PDF** produces a clean document; **⬇ Machine-readable
+   JSON** downloads `sakshi-dossier-….json`.
+8. Scan the QR (or open `‹live-url›/verify/‹hash›`) → confirm **VERIFIED ✓**.
+9. Go to `/ledger` → click **⚒️ Forge receipt #1** → confirm **TAMPER DETECTED**.
 
-If all eight pass, the demo is submission-ready.
+If all nine pass, the demo is submission-ready.
 
 ## `REQUIRED` — 3 · Record the 2-minute video (~30 min)
 

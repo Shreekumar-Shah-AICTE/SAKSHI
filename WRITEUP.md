@@ -54,6 +54,16 @@ tests** (`src/core/*.test.ts`, `src/data/store.test.ts`).
 Every live integration sits behind a clean adapter (`src/adapters/*`) that fails
 closed, so **the deployed demo needs zero secrets** and works on airplane mode.
 
+## Service 3 — Dossier & Redressal
+
+The sealed receipt becomes an **appeal-ready Loss Dossier** (`/dossier/[hash]`):
+a light-themed, print-perfect, multilingual document (Marwari/Hindi/English) with
+the QR verifier, the two independent evidence sources and the full auditable
+corroboration reasoning — the farmer taps *Save as PDF* and files it with the
+DGRC or insurance ombudsman. A machine-readable JSON export
+(`/api/dossier/[hash]`, schema `sakshi.loss-dossier/v1`) lets an authority's
+system ingest and independently re-verify the claim.
+
 ## Datasets
 
 - **Open-Meteo ERA5 reanalysis** (2015–2025 daily) for five real Churu-district

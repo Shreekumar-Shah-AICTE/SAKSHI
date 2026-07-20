@@ -125,7 +125,7 @@ export function SealReceiptCard({
       <HowVerified view={view} />
 
       <div className="mt-5">
-        <ReceiptActions verifyUrl={verifyUrl} />
+        <ReceiptActions verifyUrl={verifyUrl} receiptHash={view.receiptHash ?? ""} />
       </div>
     </div>
   );

@@ -2,8 +2,14 @@
 
 import { useState } from "react";
 
-/** Print + copy-verify-link actions for the Loss Receipt. */
-export function ReceiptActions({ verifyUrl }: { verifyUrl: string }) {
+/** Actions for the Loss Receipt: open the appeal dossier, copy the verify link. */
+export function ReceiptActions({
+  verifyUrl,
+  receiptHash,
+}: {
+  verifyUrl: string;
+  receiptHash: string;
+}) {
   const [copied, setCopied] = useState(false);
 
   async function copy() {
@@ -18,9 +24,12 @@ export function ReceiptActions({ verifyUrl }: { verifyUrl: string }) {
 
   return (
     <div className="flex flex-wrap gap-3 print:hidden">
-      <button className="btn-ghost" onClick={() => window.print()}>
-        🖨️ Print / Save PDF
-      </button>
+      <a className="btn-primary !py-3 !text-base" href={`/dossier/${receiptHash}`}>
+        📄 Appeal-ready dossier
+      </a>
+      <a className="btn-ghost" href={`/api/dossier/${receiptHash}`}>
+        ⬇️ Export JSON
+      </a>
       <button className="btn-ghost" onClick={copy}>
         {copied ? "✓ Link copied" : "🔗 Copy verify link"}
       </button>
