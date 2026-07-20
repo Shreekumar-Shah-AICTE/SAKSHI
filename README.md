@@ -7,8 +7,17 @@
 **AI for Bharat 2026 · Build Round**
 PRIMARY AgriTech · SECONDARY Financial Inclusion · ACCESS LAYER Regional-Language AI
 
-**Live Demo**
-project-sakshi.vercel.app
+---
+
+## 🚀 Live Demo
+
+[![SAKSHI Live Demo](https://img.shields.io/badge/Try%20SAKSHI-Live%20Now-brightgreen?style=for-the-badge&logo=vercel&logoColor=white)](https://project-sakshi.vercel.app)
+
+**[→ Open Live Demo](https://project-sakshi.vercel.app)**
+
+See the tamper-proof loss receipt in action. No setup required — works on desktop & mobile.
+
+---
 
 </div>
 
