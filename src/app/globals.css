@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Bulletproof, offline-safe font stacks — the identity comes from colour,
+     layout and motion, not a fragile web-font fetch. */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Noto Sans", "Noto Sans Devanagari", Arial, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #0b1120;
+  color: #e9dccb;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* The "temperature journey" backdrop: a cold night that warms toward the seal. */
+.bg-vault {
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(245, 165, 36, 0.10), transparent 60%),
+    radial-gradient(900px 500px at 50% 120%, rgba(34, 48, 79, 0.6), transparent 60%),
+    linear-gradient(180deg, #0b1120 0%, #0d1526 60%, #0b1120 100%);
+}
+
+@layer components {
+  .card {
+    @apply rounded-3xl border border-white/10 bg-night-700/70 backdrop-blur-sm;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-3 rounded-2xl bg-seal px-6 py-4
+      text-lg font-bold text-night shadow-seal transition
+      hover:brightness-105 active:scale-[0.98] focus:outline-none focus-visible:ring-4
+      focus-visible:ring-seal/40 disabled:opacity-50;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15
+      px-5 py-3 text-base font-semibold text-soil-100 transition hover:bg-white/5
+      focus:outline-none focus-visible:ring-4 focus-visible:ring-white/20;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-white/10
+      bg-white/5 px-3 py-1 text-xs font-medium text-soil-100;
+  }
+  .mono {
+    font-family: var(--font-mono);
+  }
+  .label-muted {
+    @apply text-xs uppercase tracking-[0.18em] text-soil-300;
+  }
+}
+
+/* High-contrast focus for accessibility (the real user genuinely needs it). */
+:focus-visible {
+  outline: 2px solid #ffd77a;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+::selection {
+  background: rgba(245, 165, 36, 0.3);
+}
