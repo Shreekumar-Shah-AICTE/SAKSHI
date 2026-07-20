@@ -7,6 +7,9 @@
 **AI for Bharat 2026 · Build Round**
 PRIMARY AgriTech · SECONDARY Financial Inclusion · ACCESS LAYER Regional-Language AI
 
+**Live Demo**
+project-sakshi.vercel.app
+
 </div>
 
 ---
