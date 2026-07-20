@@ -6,6 +6,22 @@ secrets.
 
 ---
 
+## `REQUIRED` — 0 · Make `main` the default branch (~30 sec, one-time)
+
+The complete, clean history lives on **both `main` and a `claude/…` build
+branch** (identical commits). GitHub auto-set the build branch as default
+because it was pushed first to the empty repo, and it won't let an automated
+token flip that pointer. Fix it in two clicks:
+
+1. Repo → **Settings → General → Default branch** → switch to **`main`** →
+   **Update**.
+2. Repo → **Branches** → delete the `claude/sakshi-build-…` branch.
+
+(Everything below works regardless, but this makes `main` the branch judges land
+on and the branch Vercel deploys by default.)
+
+---
+
 ## `REQUIRED` — 1 · Deploy to Vercel (~10 min)
 
 1. Go to <https://vercel.com/new> and sign in with GitHub.
